@@ -1,0 +1,3 @@
+# Teste: Usando um inteiro como vetor
+pokeball pikachu;
+pikachu[0] = 10;  # ERRO SEMÂNTICO!

@@ -1,0 +1,4 @@
+# Teste: Variável 'ash' não foi declarada
+pokeball pikachu;
+pikachu = 10;
+ash = 5;  # ERRO SEMÂNTICO!

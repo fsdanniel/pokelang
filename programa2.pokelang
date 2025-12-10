@@ -1,0 +1,42 @@
+# Trabalho de Compiladores - Programa 2
+# Objetivo: Imprimir a sequência de Fibonacci até um valor limite
+
+pokeball limite;
+pokeball anterior;
+pokeball atual;
+pokeball proximo;
+
+# Leitura do limite
+arremesse("Digite o valor limite para Fibonacci: \n");
+captura(limite);
+
+arremesse("Sequencia: \n");
+
+# Inicialização
+anterior = 0;
+atual = 1;
+
+# Imprime o 0 inicial, se estiver dentro do limite
+batalha (anterior fracoOuIgual limite) {
+    arremesse(anterior, " ");
+}
+
+# Imprime o 1 inicial, se estiver dentro do limite
+batalha (atual fracoOuIgual limite) {
+    arremesse(atual, " ");
+}
+
+# Calcula o próximo valor
+proximo = anterior + atual;
+
+# Loop enquanto o próximo valor não ultrapassar o limite
+jornada (proximo fracoOuIgual limite) {
+    arremesse(proximo, " ");
+    
+    # Atualiza os valores para a próxima iteração
+    anterior = atual;
+    atual = proximo;
+    proximo = anterior + atual;
+}
+
+arremesse("\nFim da sequencia.\n");

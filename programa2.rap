@@ -1,0 +1,31 @@
+; --- Inicio do Codigo Assembly Raposeitor ---
+  printf "Digite o valor limite para Fibonacci: \n"
+  read %r0
+  printf "Sequencia: \n"
+  mov %r1, 0
+  mov %r2, 1
+  lesseq %t0, %r1, %r0
+  jf %t0, R0
+  printv %r1
+  printf " "
+  label R0
+  lesseq %t1, %r2, %r0
+  jf %t1, R2
+  printv %r2
+  printf " "
+  label R2
+  add %t2, %r1, %r2
+  mov %r3, %t2
+  label R4
+  lesseq %t3, %r3, %r0
+  jf %t3, R5
+  printv %r3
+  printf " "
+  mov %r1, %r2
+  mov %r2, %r3
+  add %t4, %r1, %r2
+  mov %r3, %t4
+  jump R4
+  label R5
+  printf "\nFim da sequencia.\n"
+; --- Fim do Codigo ---

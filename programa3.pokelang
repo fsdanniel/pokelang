@@ -1,0 +1,65 @@
+# Trabalho de Compiladores - Programa 3
+# Objetivo: Ler 5 numeros, guardar num vetor e ordenar com Insertion Sort
+
+pc minhaBox[5];
+pokeball i;
+pokeball j;
+pokeball chave;
+pokeball valorJ;
+pokeball prox;
+pokeball continuar;
+pokeball tamanho;
+
+tamanho = 5;
+
+# Leitura do Vetor
+arremesse("--- Digite 5 numeros para ordenar ---\n");
+
+ginasio (i = 0; i maisFracoQue tamanho; i = i + 1) {
+    arremesse("Digite o numero da posicao ", i, ": \n");
+    captura(minhaBox[i]);
+}
+
+# Algoritmo Insertion Sort
+# Começa do segundo elemento (índice 1)
+ginasio (i = 1; i maisFracoQue tamanho; i = i + 1) {
+    
+    chave = minhaBox[i];
+    j = i - 1;
+    
+    # Loop interno (simulando while com protecao de indice)
+    continuar = 1;
+    
+    jornada (continuar identico 1) {
+        # Se j < 0, paramos para não acessar memória inválida
+        batalha (j maisFracoQue 0) {
+            continuar = 0;
+        } fugir {
+            # Agora é seguro ler o vetor
+            valorJ = minhaBox[j];
+            
+            # Se o valor é maior que a chave, empurramos para frente
+            batalha (valorJ maisForteQue chave) {
+                prox = j + 1;
+                minhaBox[prox] = valorJ;
+                j = j - 1;
+            } fugir {
+                # Achamos a posição correta
+                continuar = 0;
+            }
+        }
+    }
+    
+    # Insere a chave na posição correta
+    prox = j + 1;
+    minhaBox[prox] = chave;
+}
+
+# Impressão do Vetor Ordenado
+arremesse("----------------------\n");
+arremesse("Vetor Ordenado: \n");
+
+ginasio (i = 0; i maisFracoQue tamanho; i = i + 1) {
+    arremesse(minhaBox[i], " ");
+}
+arremesse("\n");

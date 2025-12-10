@@ -1,0 +1,35 @@
+# Trabalho de Compiladores - Programa 1
+# Objetivo: Ler três números e imprimir o maior deles
+
+# Declaração das variáveis (nossas Pokébolas)
+pokeball a;
+pokeball b;
+pokeball c;
+pokeball maior;
+
+# Leitura dos dados (Captura)
+arremesse("Digite o primeiro numero: \n");
+captura(a);
+
+arremesse("Digite o segundo numero: \n");
+captura(b);
+
+arremesse("Digite o terceiro numero: \n");
+captura(c);
+
+# Lógica: Assume que o primeiro é o maior inicialmente
+maior = a;
+
+# Verifica se o segundo é mais forte que o atual maior
+batalha (b maisForteQue maior) {
+    maior = b;
+}
+
+# Verifica se o terceiro é mais forte que o atual maior
+batalha (c maisForteQue maior) {
+    maior = c;
+}
+
+# Resultado final
+arremesse("-------------------\n");
+arremesse("O maior numero capturado foi: ", maior, "\n");

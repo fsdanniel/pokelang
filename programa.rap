@@ -1,0 +1,16 @@
+; --- Inicio do Codigo Assembly Raposeitor ---
+  printf "Digite o valor de A: \n"
+  read %r0
+  printf "Digite o valor de B: \n"
+  read %r1
+  greater %t0, %r0, %r1
+  jf %t0, R0
+  mov %r2, %r0
+  jump R1
+  label R0
+  mov %r2, %r1
+  label R1
+  printf "O maior valor eh: "
+  printv %r2
+  printf "\n"
+; --- Fim do Codigo ---

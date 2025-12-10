@@ -1,0 +1,8 @@
+# Arquivo de teste para Erro Sintático
+
+pokeball pikachu  # Erro! Faltando o ';' aqui
+
+ginasio (i = 0; i maisFracoQue 5; i = i + 1) {
+    arremesse(i);
+}
+

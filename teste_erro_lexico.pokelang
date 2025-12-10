@@ -1,0 +1,5 @@
+# Arquivo de teste para Erro Léxico
+
+pokeball @ash; # Erro! O '@' não é permitido
+
+arremesse("Teste de erro.");

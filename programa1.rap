@@ -1,0 +1,21 @@
+; --- Inicio do Codigo Assembly Raposeitor ---
+  printf "Digite o primeiro numero: \n"
+  read %r0
+  printf "Digite o segundo numero: \n"
+  read %r1
+  printf "Digite o terceiro numero: \n"
+  read %r2
+  mov %r3, %r0
+  greater %t0, %r1, %r3
+  jf %t0, R0
+  mov %r3, %r1
+  label R0
+  greater %t1, %r2, %r3
+  jf %t1, R2
+  mov %r3, %r2
+  label R2
+  printf "-------------------\n"
+  printf "O maior numero capturado foi: "
+  printv %r3
+  printf "\n"
+; --- Fim do Codigo ---

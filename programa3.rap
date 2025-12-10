@@ -1,0 +1,71 @@
+; --- Inicio do Codigo Assembly Raposeitor ---
+  mov %r11, 5
+  printf "--- Digite 5 numeros para ordenar ---\n"
+  mov %r5, 0
+  label R0
+  less %t0, %r5, %r11
+  jf %t0, R1
+  printf "Digite o numero da posicao "
+  printv %r5
+  printf ": \n"
+  read %t1
+  store %t1, %r5(0)
+  add %t2, %r5, 1
+  mov %r5, %t2
+  jump R0
+  label R1
+  mov %r5, 1
+  label R2
+  less %t3, %r5, %r11
+  jf %t3, R3
+  load %t4, %r5(0)
+  mov %r7, %t4
+  sub %t5, %r5, 1
+  mov %r6, %t5
+  mov %r10, 1
+  label R4
+  equal %t6, %r10, 1
+  jf %t6, R5
+  less %t7, %r6, 0
+  jf %t7, R6
+  mov %r10, 0
+  jump R7
+  label R6
+  load %t8, %r6(0)
+  mov %r8, %t8
+  greater %t9, %r8, %r7
+  jf %t9, R8
+  add %t10, %r6, 1
+  mov %r9, %t10
+  store %r8, %r9(0)
+  sub %t11, %r6, 1
+  mov %r6, %t11
+  jump R9
+  label R8
+  mov %r10, 0
+  label R9
+  label R7
+  jump R4
+  label R5
+  add %t12, %r6, 1
+  mov %r9, %t12
+  store %r7, %r9(0)
+  add %t13, %r5, 1
+  mov %r5, %t13
+  jump R2
+  label R3
+  printf "----------------------\n"
+  printf "Vetor Ordenado: \n"
+  mov %r5, 0
+  label R10
+  less %t14, %r5, %r11
+  jf %t14, R11
+  load %t15, %r5(0)
+  printv %t15
+  printf " "
+  add %t16, %r5, 1
+  mov %r5, %t16
+  jump R10
+  label R11
+  printf "\n"
+; --- Fim do Codigo ---

@@ -1,0 +1,4 @@
+# Teste: Variável 'pikachu' redeclarada
+pokeball pikachu;
+pokeball bulbasaur;
+pokeball pikachu;  # ERRO SEMÂNTICO!

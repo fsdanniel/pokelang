@@ -1,0 +1,23 @@
+# Programa: Maior de dois 
+
+pokeball a;
+pokeball b;
+pokeball maior;
+
+# Interação com o usuário
+arremesse("Digite o valor de A: \n");
+captura(a);
+
+arremesse("Digite o valor de B: \n");
+captura(b);
+
+# Lógica para descobrir o maior
+batalha (a maisForteQue b) {
+    maior = a;
+}
+fugir {
+    maior = b;
+}
+
+# Imprime o resultado final
+arremesse("O maior valor e: ", maior, "\n");

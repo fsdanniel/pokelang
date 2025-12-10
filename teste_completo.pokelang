@@ -1,0 +1,33 @@
+# Programa: Fibonacci ate 100
+
+pokeball limite;
+limite = 100;
+
+pokeball a;
+pokeball b;
+pokeball temp;
+
+a = 0;
+b = 1;
+temp = 0;
+
+arremesse("Sequencia de Fibonacci ate ", limite, ":\n");
+
+# Laço 'while'
+jornada (a maisFracoQue limite) {
+    arremesse(a, "\n");
+    temp = a + b;
+    a = b;
+    b = temp;
+}
+
+# Laço 'for' e teste de vetor
+pc minhaBox[5];
+pokeball i;
+
+# O 'for' preenche o vetor
+ginasio (i = 0; i maisFracoQue 5; i = i + 1) {
+    minhaBox[i] = i * 10;
+}
+
+arremesse("Teste do vetor (posicao 3): ", minhaBox[3], "\n");
